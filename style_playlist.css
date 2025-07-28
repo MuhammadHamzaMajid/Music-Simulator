@@ -1,0 +1,236 @@
+/* Reset and Universal Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Centering content vertically */
+    height: 100vh;
+    overflow-y: auto;
+    color: white;  /* Change all text color to white */
+    animation: changeBackground 20s infinite; /* Background animation */
+}
+
+/* Background animation for changing images */
+@keyframes changeBackground {
+    0% {
+        background-image: url('images/music1.jpeg');
+    }
+    40% {
+        background-image: url('images/music2.jpg');
+    }
+    70% {
+        background-image: url('images/music3.jpg');
+    }
+    100% {
+        background-image: url('images/music4.jpg');
+    }
+}
+
+body {
+    background-size: cover;
+    background-position: center;
+}
+
+/* Container for Mood Selector */
+.container {
+    text-align: center;
+    padding: 20px;
+    width: 100%;
+    max-width: 800px;
+}
+
+/* Heading */
+h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: white;  /* Change heading color to white */
+}
+
+/* Mood Selector Section */
+.mood-selector {
+    margin-top: 40px;
+}
+
+.mood-selector p {
+    font-size: 20px;
+    margin-bottom: 20px;
+    color: white;  /* Change mood selector text color to white */
+}
+
+/* Mood Buttons */
+.mood-btn {
+    font-size: 18px;
+    padding: 15px 30px;
+    margin: 10px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+/* Mood Button Colors */
+.mood-btn.happy {
+    background-color: #FFD700;  /* Gold */
+    color: #fff;
+}
+
+.mood-btn.sad {
+    background-color: #1E90FF;  /* DodgerBlue */
+    color: #fff;
+}
+
+.mood-btn.energetic {
+    background-color: #FF6347;  /* Tomato */
+    color: #fff;
+}
+
+.mood-btn.relaxed {
+    background-color: #98FB98;  /* PaleGreen */
+    color: #fff;
+}
+
+/* Mood Button Hover and Active States */
+.mood-btn:hover {
+    transform: scale(1.1);
+}
+
+.mood-btn:active {
+    transform: scale(1.05);
+}
+
+/* Now Playing Message */
+.now-playing-message {
+    font-size: 20px;
+    margin-top: 20px;
+    color: white;  /* Now playing message color */
+}
+
+/* Playlist */
+.playlist {
+    margin-top: 40px;
+    text-align: left;
+}
+
+ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+li {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: white;  /* Song list text color */
+}
+
+/* Song Button */
+.song-button {
+    font-size: 16px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    margin-left: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/* Play/Stop Button Styles */
+.song-button:hover {
+    transform: scale(1.1);
+}
+
+/* Align Play/Stop Buttons using Flexbox */
+ul {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 0;
+}
+
+li {
+    display: flex;
+    align-items: center;  /* Vertically align buttons with song names */
+    justify-content: space-between;  /* Ensure the buttons are on the opposite sides */
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: white;
+}
+
+.song-button {
+    display: inline-block;
+    font-size: 16px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.song-button:hover {
+    transform: scale(1.1);
+}
+
+/* Background Images Based on Mood */
+body.happy {
+    background-image: url('images/music1.jpeg');
+    background-size: cover;
+    background-position: center;
+}
+
+body.sad {
+    background-image: url('images/music2.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+body.energetic {
+    background-image: url('images/music3.jpeg');
+    background-size: cover;
+    background-position: center;
+}
+
+body.relaxed {
+    background-image: url('images/music4.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+/* Keyframes for fade-in animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Media Query for Responsiveness */
+@media (max-width: 768px) {
+    .container {
+        padding: 30px 40px;
+        max-width: 90%;
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+
+    p {
+        font-size: 1em;
+    }
+
+    button {
+        font-size: 1em;
+        padding: 12px;
+    }
+}
